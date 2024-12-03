@@ -1,0 +1,50 @@
+/* Animated Background */
+.bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: 
+        linear-gradient(90deg, var(--background-color) 21px, transparent 1%) center,
+        linear-gradient(var(--background-color) 21px, transparent 1%) center,
+        var(--secondary-color);
+    background-size: 22px 22px;
+    opacity: 0.1;
+}
+
+/* Cursor Trail Effect */
+.cursor-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 1s ease-out;
+}
+
+/* Matrix Mode */
+.matrix-mode {
+    transition: all 0.5s ease;
+}
+
+.matrix-mode .container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+.matrix-mode h1,
+.matrix-mode p,
+.matrix-mode .btn {
+    text-shadow: 0 0 5px #0F0;
+}
+
+/* Hidden Gradient Effect */
+.btn:active:hover {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border: none;
+    color: white;
+    transform: scale(1.1);
+}

@@ -1,0 +1,11 @@
+{
+  "name": "weshack-archive",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/js/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #60a5fa;
+    --background-color: #f0f9ff;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --success-color: #059669;
+    --winner-gold: #fbbf24;
+    --winner-silver: #94a3b8;
+    --winner-bronze: #b45309;
+}
+
+body {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    padding: 2rem;
+}
+
+/* Header Styles */
+h1 {
+    color: var(--text-primary);
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* Button Styles */
+.btn {
+    min-width: 200px;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.8rem 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.1);
+}
+
+.btn-success:hover {
+    background-color: #047857;
+    border-color: #047857;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(5, 150, 105, 0.2);
+}
+
+/* Winners Podium Styles */
+.winners-podium {
+    padding: 3rem 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 20px;
+    margin: 2rem 0;
+}
+
+.podium-place {
+    text-align: center;
+    padding: 1rem;
+}
+
+.trophy {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.trophy:hover {
+    transform: translateY(-5px) rotate(5deg);
+}
+
+.winner-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.winner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.first .winner-card {
+    border-top: 5px solid var(--winner-gold);
+    transform: translateY(-20px);
+}
+
+.second .winner-card {
+    border-top: 5px solid var(--winner-silver);
+}
+
+.third .winner-card {
+    border-top: 5px solid var(--winner-bronze);
+}
+
+/* Project Grid Styles */
+.project-card {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.project-card .btn {
+    margin: 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    margin-top: 2rem;
+}
+
+.nav-buttons .btn {
+    margin: 0.5rem;
+    min-width: 150px;
+}
+
+/* Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .podium-place {
+        margin-bottom: 2rem;
+    }
+    
+    .winner-card {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        min-width: 160px;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 6px;
+    border: 3px solid var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
