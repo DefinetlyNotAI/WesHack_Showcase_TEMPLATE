@@ -14,32 +14,6 @@
     opacity: 0.1;
 }
 
-/* Cursor Trail Effect */
-.cursor-particle {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: opacity 1s ease-out;
-}
-
-/* Matrix Mode */
-.matrix-mode {
-    transition: all 0.5s ease;
-}
-
-.matrix-mode .container {
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
-}
-
-.matrix-mode h1,
-.matrix-mode p,
-.matrix-mode .btn {
-    text-shadow: 0 0 5px #0F0;
-}
 
 /* Hidden Gradient Effect */
 .btn:active:hover {

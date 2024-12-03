@@ -1,11 +1,11 @@
-export function initializeAnimations() {
+function initializeAnimations() {
     // Enhanced button hover effects
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('mouseenter', () => {
             button.classList.add('shadow-lg');
             button.style.transform = 'translateY(-2px)';
         });
-        
+
         button.addEventListener('mouseleave', () => {
             button.classList.remove('shadow-lg');
             button.style.transform = 'translateY(0)';

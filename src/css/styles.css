@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     color: var(--text-primary);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
 }
 
 .container {
@@ -206,7 +207,7 @@ h1::after {
     .podium-place {
         margin-bottom: 2rem;
     }
-    
+
     .winner-card {
         max-width: 300px;
         margin: 0 auto;
@@ -239,4 +240,8 @@ h1::after {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
 }
