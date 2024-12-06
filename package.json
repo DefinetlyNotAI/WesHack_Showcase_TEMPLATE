@@ -14,7 +14,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "jquery": "^3.7.1"
   }
 }
