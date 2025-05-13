@@ -1,0 +1,1 @@
+> ## This is a basic template website that was planned but scrapped to be used in WES:HACK 24, It was where people would showcase their projects they did for the public, You are free to use this as you wish as a template
